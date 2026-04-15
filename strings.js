@@ -41,16 +41,34 @@ if ((signupName.trim()) === signinName){
 
 //Naming convention type
 //1. separating name with underscore is called SNAKE CASING e.g is_come
-//1. separating name by Capitalizing every word is called SNAKE CASING e.g isCome
+//1. separating name by Capitalizing every word is called CAMEL CASING e.g isCome
 
 
-//IndexOf and include
+//IndexOf and includes
+//THEY ARE SEARCH METHOD
+//indexof will return -1 if nothing is found.
+//indexof will return the first occurrence/match in the string 
+//indexof return number, and it expecting a parameter i.e what you're searching for.
+//index start count from zero
 let user_email = "olexcoded@yahoo@techcrush.com"
 let email_index = user_email.indexOf("@")// Note if the value then it gives you -1
 console.log(email_index)            //Index return NUMBER
 
+//includes return Boolean
+//
 let emailContainer_at = user_email.includes("@")//return datatype : boolean
 console.log(emailContainer_at)
+
+
+//STARTWHITH AND ENDWITH
+//Return datatype is boolean
+let userName = "techCrush Adedayo 6"
+let starts = userName.startsWith("techCrush")
+console.log(starts)
+
+let ends = userName.endsWith("6")
+console.log(ends)
+
 
 
 //25/03/2025
@@ -62,7 +80,7 @@ console.log(emailContainer_at)
 //SLICE CAN TAKE NEGATIVE VALUE BUT START FROM THE BACK.
 
 let testString = "my name is Adedayo!";
-let slicedString = testString.slice(-6, 5);
+let slicedString = testString.slice(0, 11);
 let substringString = testString.substring(0, 10);
 console.log(slicedString);
 console.log(substringString);
@@ -74,18 +92,20 @@ console.log(substringString);
 let text = "Olu is a techie. Olu loves coding and Olu loves cooking";
 let replaceText = text.replace("Olu", "He");
 let replaceAllText = text.replaceAll("Olu", "He");
-console.log(replaceAllText);
 console.log(replaceText);
+console.log(replaceAllText);
 
 
 //SPLIT
-//IS USE TO CONVERT SPRING TO ARRAY
+//IS USE TO CONVERT SPRING TO ARRAY of smaller strings
+//return type for split METHOD  is and ARRAY
+//whatsoever you are separating with as to be in the expression
 const sentence = "LANGUAGES: JavaScript, Python, Java, C++"
 let splitSentences = sentence.split(" ")
 console.log(splitSentences)
 
 let example = "She is a girl, she is a teacher, she is eating"
-console.log(example.split("She"))
+console.log(example.split(""))
 
 
 
